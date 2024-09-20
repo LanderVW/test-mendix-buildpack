@@ -36,24 +36,24 @@ dependencies:
     keyutil:
       artifact: java-keyutil/keyutil-{{ version }}.jar
       version: 0.4.0
-    "{{ version_key }}-jdk":  # Changed from "{{ version_key }}-{{ type }}"
+    "{{ version_key }}-{{ type }}":
       alias:
-        - AdoptOpenJDK-jdk  # Changed from "{{ type }}"
-        - "jdk"
+        - AdoptOpenJDK-{{ type }}
+        - "{{ type }}"
       artifact: "https://java-buildpack.cloudfoundry.org/openjdk-jdk/bionic/x86_64"
       bom_type: framework
       bom_version: "{{ version if version_key != '8' else '1.8.0.' + version.split('u')[1] }}"
       cpe: cpe:2.3:a:oracle:jdk:{{ version if version_key != "8" else "1.8.0" }}:{{ "*" if version_key != "8" else "update" + version.split("u")[1] }}:*:*:*:*:*:*
-      purl: pkg:generic/{{ vendor|lower }}-jdk@{{ version if version_key != "8" else "1.8.0." + version.split("u")[1] }}?arch=amd64
+      purl: pkg:generic/{{ vendor|lower }}-{{ type }}@{{ version if version_key != "8" else "1.8.0." + version.split("u")[1] }}?arch=amd64
       type:
-        - jdk  # Removed 'jre' to focus on JDK
+        - jre
+        - jdk
       vendor: Adoptium
       version:
         - "8": 8u392
         - "11": 11.0.23
         - "17": 17.0.9
         - "21": 21.0.3
-
   logs:
     mendix-logfilter:
       artifact: logs/mendix-logfilter-{{version}}.tar.gz
