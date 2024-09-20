@@ -69,6 +69,13 @@ dependencies:
         type:
           - mendix
           - mxbuild
+  applications:
+    - name: Offlink-Development
+    memory: 1G
+    path: C:\Users\v89865.VM\OneDrive - Van Marcke\Documenten\Mendix\Apps\Offlink\Branches\Off-Link-Acc-Prd-line-5.3.4\releases\Offlink_20240920_1133
+    buildpack: https://github.com/cloudfoundry/java-buildpack
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { repository_root: "https://java-buildpack.cloudfoundry.org/openjdk-jdk/bionic/x86_64", version: 11.+ } }'
   metering:
     sidecar:
       artifact: experimental/metering/metering-sidecar-linux-amd64-v{{ version }}.tar.gz
