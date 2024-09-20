@@ -40,7 +40,7 @@ dependencies:
       alias:
         - AdoptOpenJDK-jdk  # Changed from "{{ type }}"
         - "jdk"
-      artifact: "{{ vendor }}-jdk-{{ version }}-linux-x64.tar.gz"
+      artifact: "https://java-buildpack.cloudfoundry.org/openjdk-jdk/bionic/x86_64"
       bom_type: framework
       bom_version: "{{ version if version_key != '8' else '1.8.0.' + version.split('u')[1] }}"
       cpe: cpe:2.3:a:oracle:jdk:{{ version if version_key != "8" else "1.8.0" }}:{{ "*" if version_key != "8" else "update" + version.split("u")[1] }}:*:*:*:*:*:*
