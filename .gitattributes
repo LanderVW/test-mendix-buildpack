@@ -1,0 +1,4 @@
+bin/* eol=lf
+bin/supply eol=lf chmod=+x
+bin/detect eol=lf chmod=+x
+bin/finalize eol=lf chmod=+x
