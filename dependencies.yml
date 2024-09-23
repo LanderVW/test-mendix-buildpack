@@ -36,7 +36,7 @@ dependencies:
     keyutil:
       artifact: java-keyutil/keyutil-{{ version }}.jar
       version: 0.4.0
-    #"{{ version_key }}-{{ type }}":
+    "{{ version_key }}-{{ type }}":
       alias:
         - AdoptOpenJDK-{{ type }}
         - "{{ type }}"
