@@ -51,7 +51,7 @@ dependencies:
       vendor: Adoptium
       version:
         - "8": 8u392
-        - "11": 11.0.23
+        - "11": 11.0.24
         - "17": 17.0.9
         - "21": 21.0.3
   logs:
