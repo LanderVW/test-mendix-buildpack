@@ -40,11 +40,11 @@ dependencies:
       alias:
         - AdoptOpenJDK-{{ type }}
         - "{{ type }}"
-      artifact: "C:/Users/v89865.VM/OpenJDK11U-jre_x64_linux_hotspot_11.0.24_8.tar.gz"
+      artifact: "OpenJDK11U-jre_x64_linux_hotspot_11.0.24_8.tar.gz"
       bom_type: framework
-      #bom_version: "{{ version if version_key != '8' else '1.8.0.' + version.split('u')[1] }}"
-      #cpe: cpe:2.3:a:oracle:jdk:{{ version if version_key != "8" else "1.8.0" }}:{{ "*" if version_key != "8" else "update" + version.split("u")[1] }}:*:*:*:*:*:*
-      #purl: pkg:generic/{{ vendor|lower }}-{{ type }}@{{ version if version_key != "8" else "1.8.0." + version.split("u")[1] }}?arch=amd64
+      bom_version: "{{ version if version_key != '8' else '1.8.0.' + version.split('u')[1] }}"
+      cpe: cpe:2.3:a:oracle:jdk:{{ version if version_key != "8" else "1.8.0" }}:{{ "*" if version_key != "8" else "update" + version.split("u")[1] }}:*:*:*:*:*:*
+      purl: pkg:generic/{{ vendor|lower }}-{{ type }}@{{ version if version_key != "8" else "1.8.0." + version.split("u")[1] }}?arch=amd64
       type:
         - jre
         - jdk
