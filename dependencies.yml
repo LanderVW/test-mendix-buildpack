@@ -38,7 +38,7 @@ dependencies:
       version: 0.4.0
     "{{ version_key }}-{{ type }}":
       alias:
-        - AdoptOpenJDK-{{ type }}
+        # - AdoptOpenJDK-{{ type }}
         - "{{ type }}"
       artifact: "{{ vendor }}-{{ type }}-{{ version }}-linux-x64.tar.gz"
       bom_type: framework
